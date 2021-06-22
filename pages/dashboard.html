@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/dashboard.css">
         <title>Employee Payroll Management</title>
     </head>
+
     <body>
-        <div class="container">
-            <div class="container-title">
-                <h2><b>Employee Management System</b></h2>
+        <header class="header-content header">
+            <div>
+                <span class="emp-text">Employee Management System Dashboard</span>
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
+        </header>
+        <div class="main-content">
+            <div class="header-content">
+                <div class="emp-detail-text">
+                    Employee Details
+                </div>
+                <a href="..//pages/employee_form.html" class="add-button">
+                    <img src="../assets/icons/add-24px.svg" alt="">Add Employee</a>
+            </div>
+
+            <div class="table-main">
+                <table id="table-display" class="table">
                     <tr>
-                        <th>Name</th>
+                        <th></th>
+                        <th></th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                         <th>Email</th>
-                        <th>Address</th>
-                        <th>Phone</th>
+                        <th>Contact</th>
+                        <th>Salary</th>
                         <th>Actions</th>
                     </tr>
-                </thead>
-            </table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Smith</td>
+                        <td>Singh</td>
+                        <td>singh12@gmail.com</td>
+                        <td>9104555555</td>
+                        <td>500000</td>
+                        <td>
+                            <img id="1" onclick="remove(this)" alt="delete" src="../assets/icons/delete-black-18dp.svg">
+                            <img id="1" alt="edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>
