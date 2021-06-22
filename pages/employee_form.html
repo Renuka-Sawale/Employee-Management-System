@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/employee_form.css">
+        <title>Employee Registration Form</title>
+    </head>
+    <body>
+        <form>
+            <header class="headerContainer"><h1>Employee Registration Form</h1></header> 
+            <div>
+                <label for="text">FirstName: </label>
+                <input type="text" id="text" name="text" required>
+                <error-output class="firstname-error" for="text"></error-output>
+            </div>
+            <div>
+                <label for="text">LastName: </label>
+                <input type="text" id="text" name="text" required>
+                <error-output class="lastname-error" for="text"></error-output>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email">
+                <error-output class="email-error" for="email"></error-output>
+            </div>
+            <div>
+                <label for="tel">phoneNo: </label>
+                <input type="tel" id="tel" name="phoneNo">
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
