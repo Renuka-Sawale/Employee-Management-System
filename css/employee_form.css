@@ -14,13 +14,15 @@ body {
     display:flex;
     flex-flow: column wrap;
     align-content: center;
-    background: rgba(71, 227, 255, 0.075);
     font-weight: bold;
     margin-bottom: 20px;
+    font-size: 10px;
 }
 
 form{
     margin-top: 50px;
+    padding: 0.01em 16px;
+    background-color: snow;
 }
 
 div {
@@ -47,6 +49,6 @@ input {
 
 button {
     width: 31%;
-    height: 45px;
+    height: 35px;
     margin: 0 auto;
 }
