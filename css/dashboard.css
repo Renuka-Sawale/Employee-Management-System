@@ -156,3 +156,9 @@ td img {
     margin-bottom: 8px;
 }
 
+error-output {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+

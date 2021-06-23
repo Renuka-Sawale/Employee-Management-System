@@ -21,7 +21,7 @@ body {
     color: purple;
 }
 
-form{
+form {
     margin-top: 50px;
     padding: 40px;
     width: 600px;
@@ -58,4 +58,10 @@ button {
     width: 80px;
     height: 35px;
     margin: 0 auto;
+}
+
+error-output {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }

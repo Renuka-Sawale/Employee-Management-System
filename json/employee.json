@@ -1,22 +1,22 @@
 {
   "employees": [
     {
-        "id": 1,
-        "firstName": "Renuka",
-        "lastName": "Sawale",
-        "email": "renuka12@gmail.com"
+      "id": 1,
+      "firstName": "Renuka",
+      "lastName": "Sawale",
+      "email": "renuka12@gmail.com"
     },
     {
-        "id":2,
-        "firstName": "Ritika",
-        "lastName": "Singh",
-        "email": "ritika12@gmail.com"
+      "id":2,
+      "firstName": "Ritika",
+      "lastName": "Singh",
+      "email": "ritika12@gmail.com"
     },
     {
-        "id":3,
-        "firstName": "Rani",
-        "lastName": "Sawale",
-        "email": "rani12@gmail.com"
+      "id":3,
+      "firstName": "Rani",
+      "lastName": "Sawale",
+      "email": "rani12@gmail.com"
     }
   ]
 }
