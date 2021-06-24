@@ -1,6 +1,8 @@
 body {
     margin: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -25,13 +27,20 @@ body {
     box-sizing: border-box;
 }
 
-.header-content {
+.headerContainer {
+    display:flex;
+    flex-flow: column wrap;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 10px;
+    padding-left: 55px;
+}
+
+
+.header-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
     padding-bottom: 25px;
 }
 
