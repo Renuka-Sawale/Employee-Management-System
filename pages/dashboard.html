@@ -7,7 +7,7 @@
         <title>Employee Payroll Management</title>
     </head>
     <body>
-        <header class="headerContainer"><h1>Dashboard</h1></header> 
+        <header class="header-container"><h1><u>Dashboard</u></h1></header> 
         <div class="main-content">
             <div class="header-section">
                 <div class="emp-detail-text">
@@ -19,35 +19,33 @@
             </div>
             <div class="table-main">
                 <table id="table-display" class="table">
-                     <tr>
-                        <th></th>
-                        <th></th>
+                    <tr>
                         <th>First name</th>
                         <th>Last name</th>
-                         <th>Email</th>
-                        <th>Address</th>
-                        <th>City</th>
-                        <th>State</th>
+                        <th>Email</th>
+                        <th>Contact</th>
                         <th>Salary</th>
                         <th>Action</th>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
+                    <!-- <tr>
                         <td>Preeti</td>
                         <td>Joshi</td>
                         <td>preet1@gmail.com</td>
-                        <td>Hsr</td>
-                        <td>Bangalore</td>
-                        <td>Karnataka</td>
-                        <td>2000000</td>
+                        <td>91 89898987</td>
+                        <td>400000</td>
                         <td>
                             <img id="1" onclick="remove(this)" alt="delete" src="../assets/icons/delete-black-18dp.svg">
                             <img id="1" alt="edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
+        <script defer src="../js/getData.js"></script> 
+        <script>
+            $(document).ready(function () {
+                getData();
+            });
+        </script>
     </body>
 </html>

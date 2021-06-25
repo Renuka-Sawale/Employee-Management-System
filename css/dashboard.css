@@ -2,25 +2,12 @@
 body {
     margin: 0;
     height: 100vh;
-    
 }
 
 .header {
     padding: 15px 0;
-    background-color: #ffffff;
+    background-color: #056ce2;
 }
-
-.logo-content img { border: solid 0px #42515f; }
-
-.emp-text {
-    font-family: "Montserrat", sans-serif;
-    color: darkviolet;
-    font-size: 20px;
-}
-
-.emp-payroll { color: #42515f; }
-
-*{ box-sizing: border-box; }
 
 .main-content {
     padding: 14px;
@@ -29,12 +16,12 @@ body {
     flex-direction: column;
 }
 
-.headerContainer {
+.header-container {
     margin-bottom: 20px;
     font-size: 12px;
-    padding-left: 62px;
+    padding-left: 145px;
+    color: limegreen;
 }
-
 
 .header-section {
     display: flex;
@@ -44,30 +31,19 @@ body {
 }
 
 .emp-detail-text {
-    font: revert;
-    font-size: 20px;
+    font-size: 23px;
     color: steelblue;
-    padding-left: 48px;
+    padding-left: 134px;
 }
 
 .btn {
-    /*border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: skyblue;*/
-    
-    font: normal normal normal 22px/29px Roboto;
-    letter-spacing: 0px;
+    font: normal normal normal 21px/29px Roboto;
     color: #ffffff;
-    opacity: 1;
     background-color: skyblue;;
-    border: none;
     border-radius: 5px;
     padding: 5px 18px;
-    outline: none;
-    cursor: pointer;
     text-decoration: none;
+    margin-right: 130px;
 }
 
 table {
@@ -76,18 +52,21 @@ table {
     width: 100%;
     border: 1px solid #ddd;
 }
-  
+
 th, td {
     text-align: center;
     padding: 16px;
 }
-  
-th:first-child, td:first-child {
-    text-align: left;
+
+.table-main{
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
 }
+    
   
-tr:nth-child(even) {
-    background-color: #f2f2f2
-}
+
+
+  
 
 

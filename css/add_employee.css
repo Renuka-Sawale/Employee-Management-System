@@ -12,7 +12,7 @@ body {
     background-color: teal;
 }
 
-.headerContainer {
+.header-container {
     display:flex;
     flex-flow: column wrap;
     align-content: center;
@@ -23,7 +23,6 @@ body {
 }
 
 form {
-    margin-top: 50px;
     padding: 40px;
     width: 600px;
     background-color: white;
@@ -44,10 +43,6 @@ label, input, button {
 label {
     width: 100px;
     margin-right: 2%;
-}
-
-input {
-    flex: auto;
 }
 
 .bottom-buttons {

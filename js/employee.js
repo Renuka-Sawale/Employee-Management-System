@@ -46,18 +46,6 @@ document.getElementById("contact").oninput = function () {
     }
 }
 
-// document.getElementById("salary").oninput = function () {
-//     console.log(this.value);
-//     let regex = RegExp('^[0-9]{2} [0-9]{10}$');
-//     console.log(regex.test(this.value))
-//     if (regex.test(this.value)) {
-//         document.getElementById("salary").innerText = ""
-//     }
-//     else {
-//         document.getElementById("salaryError").innerText = "Enter the valid salary"
-//     }
-// }
-
 submitData = (e) => {
     e.preventDefault()
     console.log("addEmployee");
