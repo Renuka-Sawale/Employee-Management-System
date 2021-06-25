@@ -1,30 +1,33 @@
-let firstName = document.getElementById("firstName").nodeValue;
-let lastName = document.getElementById("lastName").nodeValue;
-let email = document.getElementById("email").nodeValue;
-let contact = document.getElementById("contact").nodeValue;
-let salary = document.getElementById("salary").nodeValue;
+let valid= false;
+submitData = (e) => {
+    e.preventDefault()
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let email = document.getElementById("email").value;
+    let contact = document.getElementById("contact").value;
+    let salary = document.getElementById("salary").value;
 
-let userData = {
-    firstName: firstName,
-    lastName: lastName,
-    email: email,
-    contact: contact,
-    salary: salary
+    if(valid) {
+        let userData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            contact: contact,
+            salary: salary
+        }
+        addEmployee(userData)
+    }
+} 
+
+addEmployee = (data) => {
+    ajaxCalling('post','http://localhost:3000/employees',data )
 }
 
-// addEmployee = (data) => {
-//     ajaxCalling('post','http://localhost:3000/employees',data )
-// }
-
-// ajaxCalling = (type, url, data) => {
-//     ajaxCalling('post','http://localhost:3000/employees',data)
-// }
-
-addEmployee = () => {
+ajaxCalling = (type, url, data) => {
     $.ajax({
-        type = 'post',
-        url: 'http://localhost:3000/employees',
-        data: userData,
+        type = type,
+        url: url,
+        data: data,
         success: function (result) {
             console.log(result);
         },
