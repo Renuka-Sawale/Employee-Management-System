@@ -27,10 +27,10 @@ document.getElementById("email").oninput = function () {
     let regex = RegExp('^[a-zA-Z0-9]+([._+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$')
     console.log(regex.test(this.value))
     if (regex.test(this.value)) {
-        document.getElementById("email").innerText = ""
+        document.getElementById("emailError").innerText = ""
     }
     else {
-        document.getElementById("emailError").innerText = " Email is not valid"
+        document.getElementById("emailError").innerText = "Email is not valid"
     }
 }
 
@@ -39,10 +39,10 @@ document.getElementById("contact").oninput = function () {
     let regex = RegExp('^[0-9]{2}[0-9]{10}$');
     console.log(regex.test(this.value))
     if (regex.test(this.value)) {
-        document.getElementById("contact").innerText = ""
+        document.getElementById("contactError").innerText = ""
     }
     else {
-        document.getElementById("contactError").innerText = " Contact is not valid"
+        document.getElementById("contactError").innerText = "Contact is not valid"
     }
 }
 
@@ -61,26 +61,39 @@ document.getElementById("contact").oninput = function () {
 submitData = (e) => {
     e.preventDefault()
     console.log("addEmployee");
-    let firstName = document.getElementById("firstName").value;
-    let lastName = document.getElementById("lastName").value;
-    let email = document.getElementById("email").value;
-    let contact = document.getElementById("contact").value;
-    let salary = document.getElementById("salary").value;
+    let firstName= document.getElementById("firstName").value;
+    let lastName= document.getElementById("lastName").value;
+    let email= document.getElementById("email").value;
+    let contact= document.getElementById("contact").value;
+    let salary= document.getElementById("salary").value;
 
-    validation(firstName, "firstNameError", "Fill the FirstName")
-    validation(lastName, "lastNameError", "Fill the LastName")
-    validation(email, "emailError", "Choose a Email address")
-    validation(contact, "contactError", "Fill the Contact")
-    validation(salary, "salaryError", "Fill the Salary")
+    let firstNameResult= validation(firstName, "firstNameError", "Fill the FirstName")
+    let lastNameResult= validation(lastName, "lastNameError", "Fill the LastName")
+    let emailResult= validation(email, "emailError", "Choose a Email address")
+    let contactResult= validation(contact, "contactError", "Fill the Contact")
+    let salaryResult= validation(salary, "salaryError", "Fill the Salary")
 
+    if(firstNameResult && lastNameResult && emailResult && contactResult && salaryResult) {
+        let userData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            contact: contact,
+            salary: salary
+        }
+        addEmployee(userData)
+    }
 }
+
 validation = (value, id, message) => {
     console.log(value.length,id,message)
     if (value.length < 3) {
         document.getElementById(id).innerText = message
+        return false;
     }
     else {
         document.getElementById(id).innerText = ""
+        return true;
     }
 }
 

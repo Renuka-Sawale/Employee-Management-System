@@ -31,6 +31,46 @@
       "email": "john67@gmail.com",
       "contact": "91 8056567899",
       "salary": "500004"
+    },
+    {
+      "firstName": "Renuka",
+      "lastName": "Sawale",
+      "email": "rrsuryawanshi11@gmail.com",
+      "contact": "9191919191",
+      "salary": "3433",
+      "id": 5
+    },
+    {
+      "firstName": "Renuka",
+      "lastName": "Sawale",
+      "email": "rrsuryawanshi11@gmail.com",
+      "contact": "919145454523",
+      "salary": "1234",
+      "id": 6
+    },
+    {
+      "firstName": "Renuka",
+      "lastName": "Sawale",
+      "email": "rrsuryawanshi11@gmail.com",
+      "contact": "919191919191",
+      "salary": "1234",
+      "id": 7
+    },
+    {
+      "firstName": "Priya",
+      "lastName": "Lade",
+      "email": "priya1@gmail.com",
+      "contact": "919191919191",
+      "salary": "1234",
+      "id": 8
+    },
+    {
+      "firstName": "Pssdsds",
+      "lastName": "Pdfsdf",
+      "email": "rrsuryawanshi11@gmail.com",
+      "contact": "919191919191",
+      "salary": "211142",
+      "id": 9
     }
   ]
 }
