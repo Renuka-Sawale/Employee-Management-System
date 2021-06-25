@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <form>
+        <form onsubmit="submitData(event)">
             <header class="headerContainer"><h1>Add Employee</h1></header> 
             <div>
                 <label for="name">First Name: </label>
@@ -37,13 +37,14 @@
             <div>
                 <label for="salary">Salary: </label>
                 <input type="salary" id="salary" name="salary" placeholder="Enter salary">
-                <!-- <error-output class="text-error" id="salaryError" for="contact"></error-output> -->
+                 <error-output class="text-error" id="salaryError" for="contact"></error-output> 
             </div>
            
             <div class="bottom-buttons">
-                <button onclick="submit()">Submit</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
         <script src="../js/employee.js"></script> 
+        <script src="../js/ajax.js"></script> 
     </body>
 </html>

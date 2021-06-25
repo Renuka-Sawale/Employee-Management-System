@@ -58,7 +58,8 @@ document.getElementById("contact").oninput = function () {
 //     }
 // }
 
-submit = () => {
+submitData = (e) => {
+    e.preventDefault()
     console.log("addEmployee");
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -66,22 +67,26 @@ submit = () => {
     let contact = document.getElementById("contact").value;
     let salary = document.getElementById("salary").value;
 
-    validation(firstName, "firstNameError", "FirstName should be atleast 3 characters")
-    validation(lastName, "lastNameError", "lastName should be atleast 3 characters")
+    validation(firstName, "firstNameError", "Fill the FirstName")
+    validation(lastName, "lastNameError", "Fill the LastName")
     validation(email, "emailError", "Choose a email address")
-    validation(contact, "contactError", "Contact should be atleast 10 digits")
-    validation(salary, "salaryError", "Salary should be atleast 3 characters")
+    validation(contact, "contactError", "Fill the Contact")
+    validation(salary, "salaryError", "Fill the Salary")
 
-
-    validation = (value, id, message) => {
-        if (value < 3) {
-            document.getElementById("id").innerText = "message"
-        }
-        else {
-            document.getElementById("id").innerText = ""
-        }
+}
+validation = (value, id, message) => {
+    console.log(value.length,id,message)
+    if (value.length < 3) {
+        document.getElementById(id).innerText = message
+    }
+    else {
+        document.getElementById(id).innerText = ""
     }
 }
+
+
+
+
 
 
 
