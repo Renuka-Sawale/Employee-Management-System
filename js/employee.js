@@ -69,7 +69,7 @@ submitData = (e) => {
 
     validation(firstName, "firstNameError", "Fill the FirstName")
     validation(lastName, "lastNameError", "Fill the LastName")
-    validation(email, "emailError", "Choose a email address")
+    validation(email, "emailError", "Choose a Email address")
     validation(contact, "contactError", "Fill the Contact")
     validation(salary, "salaryError", "Fill the Salary")
 

@@ -16,6 +16,8 @@ submitData = (e) => {
             salary: salary
         }
         addEmployee(userData)
+    } else {
+        return false;
     }
 } 
 
