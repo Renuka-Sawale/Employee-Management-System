@@ -8,7 +8,7 @@ ajaxCalling = (type, url, data) => {
         url: url,
         data: data,
         success: function (result) {
-            console.log(result);
+            window.location.href= "../pages/dashboard.html"
         },
         error: function (result) {
             console.log(result);
