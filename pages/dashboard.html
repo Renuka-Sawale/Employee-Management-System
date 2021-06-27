@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/edit_modal.css"> 
         <title>Employee Payroll Management</title>
     </head>
     <body>
@@ -29,6 +30,58 @@
                 </table>
             </div>
         </div>
+
+        <div id="employeeModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Edit Employee</h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <label for="name">First Name: </label>
+                        <input type="text" id="firstName" placeholder="Enter First Name">
+                        <error-output class="text-error" id="firstNameError" for="text"></error-output>
+                    </div>
+                    
+                    <div>
+                        <label for="lname">Last name: </label>
+                        <input type="text" id="lastName" placeholder="Enter Last Name">
+                        <error-output class="text-error" id="lastNameError" for="text"></error-output>
+                    </div>
+
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" placeholder="Enter Email">
+                        <error-output class="text-error" id="emailError" for="email"></error-output>
+                    </div>
+
+                    <div>
+                        <label for="contact">Contact: </label>
+                        <input type="number" id="contact" placeholder="Enter contact no">
+                        <error-output class="text-error" id="contactError" for="contact"></error-output>
+                    </div>
+
+                    <div>
+                        <label for="salary">Salary: </label>
+                        <input type="salary" id="salary" name="salary" placeholder="Enter salary">
+                        <error-output class="text-error" id="salaryError" for="contact"></error-output> 
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <button id="submitBtn" onclick="submit()" class="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <script>
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script> 
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script defer src="../js/getData.js"></script> 
         <script>

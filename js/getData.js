@@ -25,7 +25,7 @@ ajaxCalling = (type, url) => {
                     <td>${data[i].salary}</td>
                     <td>
                         <img id="1" onclick="remove(${data[i].id})" alt="delete" src="../assets/icons/delete-black-18dp.svg">
-                        <img id="1" onclick="update(this)" alt="edit"  src="../assets/icons/create-black-18dp.svg">
+                        <img id="submitBtn" src="../assets/icons/create-black-18dp.svg" type="button" onclick="displayModal('${data[i].firstName}','${data[i].lastName}','${data[i].email}','${data[i].contact}','${data[i].salary}')"> 
                     </td>
                 </tr>`;
             $('#table-display').append(row);
@@ -45,3 +45,52 @@ const remove= (id)=> {
         }
     })
 }
+
+var modal = document.getElementById("employeeModal");
+//var btn = document.getElementById("submitBtn");
+// var btn = document.getElementById("submitBtn");
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
+
+function displayModal(firstName, lastName, email, contact, salary) {
+    modal.style.display = "block";
+
+    document.getElementById("firstName").value = firstName;
+    document.getElementById("lastName").value = lastName;
+    document.getElementById("email").value = email;
+    document.getElementById("contact").value = contact;
+    document.getElementById("salary").value = salary;
+}
+
+function putData() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let email = document.getElementById("email").value;
+    let contact = document.getElementById("contact").value;
+    let salary = document.getElementById("salary").value;
+    
+    let putData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        contact: contact,
+        salary: salary
+    }
+
+    $.ajax({
+        type: 'PUT',
+        url: 'http://localhost:3000/employees/' + id,
+        data: putData,
+        success: function (result) {
+            getEmployee();
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
+}
+
+
+
+
