@@ -1,4 +1,4 @@
-function addEmployee (data) {
+function getEmployee () {
     ajaxCalling('GET','http://localhost:3000/employees')
 }
 

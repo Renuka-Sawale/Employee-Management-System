@@ -46,6 +46,18 @@ document.getElementById("contact").oninput = function () {
     }
 }
 
+document.getElementById("salary").oninput = function () {
+    console.log(this.value);
+    let regex = RegExp('[0-9][1-9.]*[0-9]+[1-9]*');
+    console.log(regex.test(this.value))
+    if (regex.test(this.value)) {
+        document.getElementById("salaryError").innerText = ""
+    }
+    else {
+        document.getElementById("salaryError").innerText = "Salary is not valid"
+    }
+}
+
 submitData = (e) => {
     e.preventDefault()
     console.log("addEmployee");
@@ -57,7 +69,7 @@ submitData = (e) => {
 
     let firstNameResult= validation(firstName, "firstNameError", "Fill the FirstName")
     let lastNameResult= validation(lastName, "lastNameError", "Fill the LastName")
-    let emailResult= validation(email, "emailError", "Choose a Email address")
+    let emailResult= validation(email, "emailError", "Fill a Email address")
     let contactResult= validation(contact, "contactError", "Fill the Contact")
     let salaryResult= validation(salary, "salaryError", "Fill the Salary")
 
