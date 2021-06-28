@@ -46,6 +46,35 @@ const remove= (id)=> {
     })
 }
 
+// function postData() {
+//     let firstName = document.getElementById("firstName").value;
+//     let lastName = document.getElementById("lastName").value;
+//     let email = document.getElementById("email").value;
+//     let contact = document.getElementById("number").value;
+//     let salary = document.getElementById("salary").value;
+
+//     let putUserData = {
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         contact: contact,
+//         salary: salary
+//     }
+
+//     $.ajax({
+//         type: 'POST',
+//         url: 'http://localhost:3000/employees',
+//         data: putUserData,
+//         success: function (result) {
+//             resetFields();
+//             window.location.href = "../html/dashboard.html";
+//         },
+//         error: function (result) {
+//             console.log(result);
+//         }
+//     });
+// }
+
 var modal = document.getElementById("employeeModal");
 //var btn = document.getElementById("submitBtn");
 // var btn = document.getElementById("submitBtn");
@@ -70,7 +99,7 @@ function putData() {
     let contact = document.getElementById("contact").value;
     let salary = document.getElementById("salary").value;
     
-    let putData = {
+    let putEmpData = {
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -81,7 +110,7 @@ function putData() {
     $.ajax({
         type: 'PUT',
         url: 'http://localhost:3000/employees/' + id,
-        data: putData,
+        data: putEmpData,
         success: function (result) {
             getEmployee();
         },

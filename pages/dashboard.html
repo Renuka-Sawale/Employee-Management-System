@@ -38,38 +38,40 @@
                     <h2>Edit Employee</h2>
                 </div>
                 <div class="modal-body">
-                    <div>
-                        <label for="name">First Name: </label>
-                        <input type="text" id="firstName" placeholder="Enter First Name">
-                        <error-output class="text-error" id="firstNameError" for="text"></error-output>
-                    </div>
-                    
-                    <div>
-                        <label for="lname">Last name: </label>
-                        <input type="text" id="lastName" placeholder="Enter Last Name">
-                        <error-output class="text-error" id="lastNameError" for="text"></error-output>
-                    </div>
+                    <div class="modal-body-content">
+                        <div class="content">
+                            <label for="name">First Name: </label>
+                            <input type="text" id="firstName" placeholder="Enter First Name">
+                            <error-output class="text-error" id="firstNameError" for="text"></error-output>
+                        </div>
+                        
+                        <div class="content1">
+                            <label for="lname">Last name: </label>
+                            <input type="text" id="lastName" placeholder="Enter Last Name">
+                            <error-output class="text-error" id="lastNameError" for="text"></error-output>
+                        </div>
 
-                    <div>
-                        <label for="email">Email: </label>
-                        <input type="email" id="email" placeholder="Enter Email">
-                        <error-output class="text-error" id="emailError" for="email"></error-output>
-                    </div>
+                        <div class="content2">
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" placeholder="Enter Email">
+                            <error-output class="text-error" id="emailError" for="email"></error-output>
+                        </div>
 
-                    <div>
-                        <label for="contact">Contact: </label>
-                        <input type="number" id="contact" placeholder="Enter contact no">
-                        <error-output class="text-error" id="contactError" for="contact"></error-output>
-                    </div>
+                        <div class="content3">
+                            <label for="contact">Contact: </label>
+                            <input type="number" id="contact" placeholder="Enter contact no">
+                            <error-output class="text-error" id="contactError" for="contact"></error-output>
+                        </div>
 
-                    <div>
-                        <label for="salary">Salary: </label>
-                        <input type="salary" id="salary" name="salary" placeholder="Enter salary">
-                        <error-output class="text-error" id="salaryError" for="contact"></error-output> 
+                        <div class="content4">
+                            <label for="salary">Salary: </label>
+                            <input type="salary" id="salary" name="salary" placeholder="Enter salary">
+                            <error-output class="text-error" id="salaryError" for="contact"></error-output> 
+                        </div>
                     </div>
                    
                     <div class="modal-footer">
-                        <button id="submitBtn" onclick="submit()" class="button">Submit</button>
+                        <button onsubmit="putData()" class="button">Submit</button>
                     </div>
                 </div>
             </div>
@@ -84,6 +86,8 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script defer src="../js/getData.js"></script> 
+        <script defer src="../js/employee.js"></script> 
+
         <script>
             $(document).ready(function () {
                 getEmployee();

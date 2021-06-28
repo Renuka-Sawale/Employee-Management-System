@@ -7,6 +7,14 @@
       "contact": "919898989878",
       "salary": "352525",
       "id": 1
+    },
+    {
+      "firstName": "Dattu",
+      "lastName": "Sawale",
+      "email": "rrsuryawanshi11@gmail.com",
+      "contact": "917878909090",
+      "salary": "2313",
+      "id": 3
     }
   ]
 }
